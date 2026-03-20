@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — iCat Infotech</title>
+  <meta name="description" content="Get in touch with iCat Infotech. Offices in Secunderabad and Nagpur. Request a quote for enterprise IT infrastructure solutions.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FF6A00'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='900' font-size='18' fill='white'%3EiC%3C/text%3E%3C/svg%3E">
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">ICAT <span>INFOTECH</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="nav-cta">Request a Quote</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <p class="label-upper fade-up">Engineered Communication</p>
+      <div class="hero-grid">
+        <div>
+          <h1 class="heading-xl hero-title fade-up fade-up-delay-1">
+            LET'S BUILD THE<br>
+            <span class="text-accent">FUTURE</span><br>TOGETHER.
+          </h1>
+        </div>
+        <div style="display:flex;align-items:flex-end;">
+          <p class="hero-description fade-up fade-up-delay-2">
+            From technical support to enterprise solutions, our precision-driven team is ready to accelerate your digital transformation.
+          </p>
+        </div>
+      </div>
+      <div class="hero-gradient-line fade-up fade-up-delay-3"></div>
+    </div>
+  </section>
+
+  <!-- Office Locations -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2 fade-up">
+        <!-- Secunderabad -->
+        <div class="card office-card">
+          <div class="office-card-header" style="position:relative;">
+            <h3>Secunderabad Office</h3>
+            <span class="office-state">Andhra Pradesh | Telangana</span>
+            <span class="office-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+          </div>
+          <div class="office-card-image">
+            <img src="images/office-building.png" alt="Secunderabad Office" loading="lazy">
+          </div>
+          <div class="office-card-body">
+            <div class="office-detail">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>3C2, Cyber Heights, Road No. 2, Banjara Hills, Secunderabad, 500034</span>
+            </div>
+            <div class="office-detail">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+91 40 6677 8899</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nagpur -->
+        <div class="card office-card">
+          <div class="office-card-header" style="position:relative;">
+            <h3>Nagpur Office</h3>
+            <span class="office-state">Maharashtra</span>
+            <span class="office-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+          </div>
+          <div class="office-card-image">
+            <img src="images/server-room.png" alt="Nagpur Office" loading="lazy">
+          </div>
+          <div class="office-card-body">
+            <div class="office-detail">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>4th Floor, IT Park, South Ambazari Road, Nagpur, 440022</span>
+            </div>
+            <div class="office-detail">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+91 712 2233 4455</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form + Support -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="contact-form-section fade-up">
+        <!-- Form -->
+        <div class="card form-card">
+          <h3 class="heading-md" style="margin-bottom:1.5rem;">Send a Message</h3>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fullName">Full Name</label>
+                <input type="text" class="form-input" id="fullName" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input type="email" class="form-input" id="email" placeholder="j@your-company.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <select class="form-select" id="subject">
+                <option>General Inquiry</option>
+                <option>Request a Quote</option>
+                <option>Technical Support</option>
+                <option>Partnership</option>
+                <option>Careers</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Your Message</label>
+              <textarea class="form-textarea" id="message" placeholder="How can we help you accelerate?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+              DISPATCH MESSAGE
+            </button>
+          </form>
+        </div>
+
+        <!-- Support Info -->
+        <div class="support-stack">
+          <!-- High-Visibility Support -->
+          <div class="card support-card">
+            <h4 class="heading-sm" style="margin-bottom:1.5rem;">High-Visibility Support</h4>
+            <div style="margin-bottom:1.25rem;">
+              <span class="support-label">General Support</span>
+              <p class="support-email" style="margin-top:0.5rem;">hello@icat.infotech</p>
+            </div>
+            <div>
+              <span class="support-label">Technical Engine</span>
+              <p class="support-email" style="margin-top:0.5rem;">ops@icat.infotech</p>
+            </div>
+          </div>
+
+          <!-- India Presence -->
+          <div class="card india-card">
+            <h4>iCat Infotech Present All Over India</h4>
+            <p>Our distributed infrastructure ensures low-latency service delivery and local expertise across every major Indian hub.</p>
+            <div class="india-dots">
+              <div class="india-dot"></div>
+              <div class="india-dot"></div>
+              <div class="india-dot"></div>
+              <div class="india-dot"></div>
+              <div class="india-dot"></div>
+            </div>
+            <span class="india-link">
+              + 15 LOCAL HUBS
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="section">
+    <div class="container">
+      <div class="stats-bar fade-up">
+        <div class="stat-card">
+          <div class="stat-card-bg" style="background-image:url('images/city-skyline.png');"></div>
+          <div class="stat-card-content">
+            <div class="stat-value">24/7</div>
+            <div class="stat-name">Technical Uptime</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-bg" style="background-image:url('images/server-room.png');"></div>
+          <div class="stat-card-content">
+            <div class="stat-value">500+</div>
+            <div class="stat-name">Experts</div>
+          </div>
+        </div>
+        <div class="stat-icon-card">
+          <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:var(--accent)">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+          <span class="stat-name" style="font-size:0.8rem;">Hyper Performance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">ICAT <span>INFOTECH</span></a>
+          <p class="footer-tagline">Engineering precision solutions for the modern enterprise ecosystem.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Locations</h4>
+          <a href="contact.html">Secunderabad Office</a>
+          <a href="contact.html">Nagpur Office</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2024 iCat Infotech. All rights reserved.</span>
+        <div class="footer-badges">
+          <span>ISO 27001 Certified</span>
+          <span>Uptime Guaranteed</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
