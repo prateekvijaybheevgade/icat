@@ -10,9 +10,6 @@
 </head>
 <body>
 
-  <!-- Matrix Rain Background Canvas -->
-  <canvas id="matrixCanvas"></canvas>
-
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-inner">
@@ -33,21 +30,23 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <canvas id="particleCanvas"></canvas>
     <div class="container hero-content">
-      <p class="label-upper fade-up">Engineered for Excellence</p>
-      <h1 class="heading-xl hero-title fade-up fade-up-delay-1">
-        THE KINETIC<br>
-        <span class="text-accent">ENGINE</span> OF IT.
-      </h1>
-      <div class="hero-grid">
-        <div>
+      <div class="hero-split">
+        <div class="hero-left">
+          <p class="label-upper fade-up">Engineered for Excellence</p>
+          <h1 class="heading-xl hero-title fade-up fade-up-delay-1">
+            THE KINETIC<br>
+            <span class="text-accent">ENGINE</span> OF IT.
+          </h1>
           <p class="hero-description fade-up fade-up-delay-2">
             iCat Infotech is a global technology powerhouse delivering high-performance infrastructure solutions. We don't just provide services; we engineer the "Right Solutions" for a connected world.
           </p>
+          <div class="hero-gradient-line fade-up fade-up-delay-3"></div>
+        </div>
+        <div class="hero-right">
+          <div id="globe-container"></div>
         </div>
       </div>
-      <div class="hero-gradient-line fade-up fade-up-delay-3"></div>
     </div>
   </section>
 
@@ -232,6 +231,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="animations.js"></script>
 </body>
 </html>

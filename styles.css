@@ -1605,304 +1605,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
-   3D & SECURITY ANIMATION STYLES
+   3D GLOBE HERO STYLES
    ======================================== */
 
-/* ── Particle Canvas (Hero Background) ── */
-#particleCanvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: auto;
-  opacity: 0.8;
+/* ── Hero Split Layout (Text Left, Globe Right) ── */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  min-height: 80vh;
 }
 
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero .hero-content {
-  position: relative;
+.hero-left {
   z-index: 2;
 }
 
-/* ── Matrix Rain Canvas ── */
-#matrixCanvas {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.4;
-}
-
-/* ── Cyber Scanning Line ── */
-.cyber-scanline {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg,
-    transparent,
-    rgba(255, 106, 0, 0.3) 20%,
-    rgba(255, 106, 0, 0.7) 50%,
-    rgba(255, 106, 0, 0.3) 80%,
-    transparent
-  );
-  z-index: 1;
-  animation: scanlineMove 4s ease-in-out infinite;
-  box-shadow: 0 0 15px rgba(255, 106, 0, 0.4), 0 0 30px rgba(255, 106, 0, 0.2);
-  pointer-events: none;
-}
-
-@keyframes scanlineMove {
-  0% { top: -2px; opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { top: 100%; opacity: 0; }
-}
-
-/* ── Glitch Text Effect ── */
-.glitch-text {
-  position: relative;
-  display: inline-block;
-}
-
-.glitch-text::before,
-.glitch-text::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  opacity: 0;
-}
-
-.glitch-text:hover::before {
-  animation: glitch1 0.3s ease-in-out 1;
-  color: #00ffff;
-  opacity: 0.7;
-}
-
-.glitch-text:hover::after {
-  animation: glitch2 0.3s ease-in-out 1;
-  color: #ff0066;
-  opacity: 0.7;
-}
-
-@keyframes glitch1 {
-  0% { transform: translate(0); opacity: 0; }
-  20% { transform: translate(-3px, 2px); opacity: 0.7; }
-  40% { transform: translate(3px, -2px); opacity: 0.7; }
-  60% { transform: translate(-2px, 1px); opacity: 0.7; }
-  80% { transform: translate(2px, -1px); opacity: 0.7; }
-  100% { transform: translate(0); opacity: 0; }
-}
-
-@keyframes glitch2 {
-  0% { transform: translate(0); opacity: 0; }
-  20% { transform: translate(3px, -2px); opacity: 0.7; }
-  40% { transform: translate(-3px, 2px); opacity: 0.7; }
-  60% { transform: translate(2px, -1px); opacity: 0.7; }
-  80% { transform: translate(-2px, 1px); opacity: 0.7; }
-  100% { transform: translate(0); opacity: 0; }
-}
-
-/* ── Security Badge (Floating) ── */
-.security-badge {
-  position: absolute;
-  bottom: 2rem;
-  right: 3rem;
+.hero-right {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  background: rgba(10, 10, 10, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 106, 0, 0.25);
-  border-radius: 100px;
-  color: var(--accent);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  z-index: 3;
-  animation: badgeFloat 3s ease-in-out infinite, badgePulse 2s ease-in-out infinite;
-}
-
-.security-badge svg {
-  color: var(--accent);
-  filter: drop-shadow(0 0 6px rgba(255, 106, 0, 0.5));
-}
-
-@keyframes badgeFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-@keyframes badgePulse {
-  0%, 100% { border-color: rgba(255, 106, 0, 0.25); }
-  50% { border-color: rgba(255, 106, 0, 0.6); box-shadow: 0 0 20px rgba(255, 106, 0, 0.15); }
-}
-
-/* ── Hex Grid Background ── */
-.hex-grid-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.04;
-  background-image:
-    linear-gradient(30deg, var(--accent) 12%, transparent 12.5%, transparent 87%, var(--accent) 87.5%, var(--accent)),
-    linear-gradient(150deg, var(--accent) 12%, transparent 12.5%, transparent 87%, var(--accent) 87.5%, var(--accent)),
-    linear-gradient(30deg, var(--accent) 12%, transparent 12.5%, transparent 87%, var(--accent) 87.5%, var(--accent)),
-    linear-gradient(150deg, var(--accent) 12%, transparent 12.5%, transparent 87%, var(--accent) 87.5%, var(--accent)),
-    linear-gradient(60deg, rgba(255,106,0,0.3) 25%, transparent 25.5%, transparent 75%, rgba(255,106,0,0.3) 75%),
-    linear-gradient(60deg, rgba(255,106,0,0.3) 25%, transparent 25.5%, transparent 75%, rgba(255,106,0,0.3) 75%);
-  background-size: 50px 86px;
-  background-position: 0 0, 0 0, 25px 43px, 25px 43px, 0 0, 25px 43px;
-}
-
-/* ── Cursor Trail ── */
-.cursor-dot {
-  position: fixed;
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%) scale(1);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  box-shadow: 0 0 8px rgba(255, 106, 0, 0.6);
-}
-
-/* ── Enhanced Card 3D Hover ── */
-.card,
-.cert-card {
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  backface-visibility: hidden;
-}
-
-.card:hover,
-.cert-card:hover {
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(255, 106, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-/* ── Navbar Glassmorphism Enhancement ── */
-.navbar.scrolled {
-  background: rgba(10, 10, 10, 0.8) !important;
-  backdrop-filter: blur(20px) saturate(1.4);
-  -webkit-backdrop-filter: blur(20px) saturate(1.4);
-  border-bottom: 1px solid rgba(255, 106, 0, 0.1);
-}
-
-/* ── Section Corner Brackets (Cyber Frame) ── */
-.section::before,
-.section::after {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-color: rgba(255, 106, 0, 0.15);
-  border-style: solid;
-  pointer-events: none;
+  justify-content: center;
   z-index: 1;
 }
 
-.section::before {
-  top: 1rem;
-  left: 1rem;
-  border-width: 1px 0 0 1px;
-}
-
-.section::after {
-  bottom: 1rem;
-  right: 1rem;
-  border-width: 0 1px 1px 0;
-}
-
-.section {
+/* ── Globe Container ── */
+#globe-container {
+  width: 100%;
+  height: 550px;
   position: relative;
 }
 
-/* ── Glow line under hero gradient line ── */
-.hero-gradient-line {
-  position: relative;
+#globe-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }
 
-.hero-gradient-line::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  filter: blur(8px);
-  opacity: 0.3;
+/* ── Responsive Globe ── */
+@media (max-width: 1024px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+
+  #globe-container {
+    height: 350px;
+  }
 }
 
-/* ── Enhanced Button Cyber Glow ── */
-.btn-primary {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.1), transparent 30%);
-  animation: btnSpin 3s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.btn-primary:hover::before {
-  opacity: 1;
-}
-
-@keyframes btnSpin {
-  to { transform: rotate(360deg); }
-}
-
-/* ── Nav CTA glow pulse ── */
-.nav-cta {
-  animation: ctaGlow 2s ease-in-out infinite;
-}
-
-@keyframes ctaGlow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 106, 0, 0.4); }
-  50% { box-shadow: 0 0 20px 4px rgba(255, 106, 0, 0.2); }
-}
-
-/* ── Cert card hover — shield pulse ── */
-.cert-card:hover .cert-icon {
-  animation: shieldPulse 0.6s ease;
-}
-
-@keyframes shieldPulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); filter: drop-shadow(0 0 12px rgba(255, 106, 0, 0.6)); }
-  100% { transform: scale(1); }
-}
-
-/* ── Responsive: hide heavy effects on mobile ── */
 @media (max-width: 768px) {
-  #particleCanvas { display: none; }
-  .cursor-dot { display: none; }
-  .security-badge { display: none; }
-  .section::before,
-  .section::after { display: none; }
-  .hex-grid-bg { display: none; }
+  #globe-container {
+    height: 280px;
+  }
 }
+
